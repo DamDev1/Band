@@ -67,6 +67,52 @@ header nav .bars {
   cursor: pointer;
 }
 
+.showcaseContainer {
+  height: 40vw;
+  padding: 20px;
+  display: flex;
+}
+.showcaseContainer .showcaseText {
+  margin-top: 8%;
+  font-family: "Lato", sans-serif;
+}
+.showcaseContainer .showcaseText .textOne p {
+  font-family: "Lato", sans-serif;
+}
+.showcaseContainer .showcaseText .textOne h1 {
+  margin-top: 15px;
+}
+.showcaseContainer .showcaseText .textOne h1 span {
+  display: block;
+  margin-top: 10px;
+}
+.showcaseContainer .showcaseText .textTwo {
+  margin-top: 20px;
+  width: 80%;
+  letter-spacing: 1px;
+}
+.showcaseContainer .showcaseText .textButton {
+  margin-top: 20px;
+}
+.showcaseContainer .showcaseText .textButton button {
+  padding: 15px;
+  border: 0;
+}
+.showcaseContainer .showcaseText .textButton button:nth-child(2) {
+  background: black;
+  color: white;
+  border: 0;
+  margin-left: 10px;
+}
+.showcaseContainer .showcaseImg {
+  width: 50vw;
+  height: 30vw;
+  background: #3d2f2f;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 @media (max-width: 768px) {
   header nav .brandName {
     display: block;
@@ -102,5 +148,12 @@ header nav .bars {
   }
   header nav .bars {
     display: block;
+  }
+
+  .showcaseContainer {
+    margin-top: 5%;
+  }
+  .showcaseContainer .showcaseImg {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */

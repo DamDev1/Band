@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+header {
+  color: white;
+  background: black;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
+header nav .brandName {
+  display: none;
+}
+header nav .liContainer {
+  display: flex;
+  justify-content: space-between;
+}
+header nav .liContainer a {
+  text-decoration: none;
+  margin-left: 5px;
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  padding: 1em;
+}
+header nav .liContainer a .ulList {
+  color: white;
+  list-style: none;
+}
+header nav .liContainer a:nth-child(1) {
+  margin-left: 0;
+}
+header nav .liContainer a:hover {
+  background: rgba(156, 156, 156, 0.829);
+  transition: 0.2s;
+  cursor: pointer;
+}
+header nav .liContainer .inputBar {
+  margin-top: 10px;
+  position: absolute;
+  right: 50px;
+}
+header nav .liContainer .inputBar input {
+  padding: 5px;
+  outline: none;
+}
+header nav .liContainer .search {
+  padding: 0.95em;
+  right: 0;
+  position: absolute;
+  cursor: pointer;
+}
+header nav .liContainer .search:hover {
+  background: rgba(156, 156, 156, 0.829);
+  transition: 0.2s;
+}
+header nav .bars {
+  font-size: 18px;
+  padding: 0.8em;
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  header nav .brandName {
+    display: block;
+    padding: 1em;
+    font-family: "Lato", sans-serif;
+    position: absolute;
+  }
+  header nav .brandName:hover {
+    background: rgba(156, 156, 156, 0.829);
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  header nav .liContainer {
+    display: block;
+    margin-top: -200px;
+    margin-left: 1em;
+  }
+  header nav .liContainer a:hover {
+    background: none;
+  }
+  header nav .liContainer a:nth-child(1) {
+    display: none;
+  }
+  header nav .liContainer .inputBar {
+    top: 0;
+  }
+  header nav .liContainer .search {
+    display: none;
+  }
+  header nav .active {
+    margin-top: 40px;
+    transition: 2s;
+  }
+  header nav .bars {
+    display: block;
+  }
+}/*# sourceMappingURL=style.css.map */

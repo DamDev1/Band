@@ -82,7 +82,7 @@ header{
 
 .showcaseContainer{
     height: 40vw;
-    padding: 20px;
+    padding: 2em;
     display: flex;
 
 
@@ -98,8 +98,20 @@ header{
                 margin-top: 15px;
 
                 span{
-                    display: block;
                     margin-top: 10px;
+                    position: relative;
+                    display: block;
+                }
+
+                span::after{
+                    position: absolute;
+                    content: "";
+                    width: 3px;
+                    height: 1em;
+                    background: black;
+                    margin-top: 8px;
+                    margin-left: 1px;
+                    animation: 1s blink infinite;
                 }
             }
         }
@@ -134,6 +146,54 @@ header{
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
+        margin-top: 30px;
+    }
+}
+
+.about{
+    font-family: 'Lato', sans-serif;
+    .container{
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+
+        .aboutImg{
+            width: 80vw;
+            height: 30vw;
+            background-color: blueviolet;
+            margin-left: 30px;
+        }
+
+        .aboutTabs{
+            margin-left: 30px;
+            margin-top: 20px;
+
+            .tabButton{
+
+                button{
+                    padding: 10px;
+                }
+            }
+
+            .tab{
+                display: none;
+
+                h1{
+                    margin-top: 20px;
+                }
+
+                p{
+                    margin-top: 10px;
+                    letter-spacing: 0.5px;
+                    line-height: 20px;
+                }
+
+                h2{
+                    margin-top: 20px;
+                }
+            }
+        }
     }
 }
 
@@ -195,5 +255,32 @@ header{
         .showcaseImg{
             display: none;
         }
+    }
+}
+
+
+@keyframes blink{
+    0%{
+        background: black;
+    }
+
+    20%{
+        background: black;
+    }
+
+    40%{
+        background: black;
+    }
+
+    80%{
+        background: white;
+    }
+
+    90%{
+        background: white;
+    }
+
+    100%{
+        background: black;
     }
 }

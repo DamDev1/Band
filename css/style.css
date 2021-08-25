@@ -5,6 +5,7 @@
 
 body {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -28,18 +29,14 @@ header nav .liContainer a {
   font-family: "Lato", sans-serif;
   font-size: 15px;
   padding: 1em;
+  cursor: pointer;
 }
 header nav .liContainer a .ulList {
   color: white;
   list-style: none;
 }
-header nav .liContainer a:nth-child(1) {
-  margin-left: 0;
-}
 header nav .liContainer a:hover {
-  background: rgba(156, 156, 156, 0.829);
-  transition: 0.2s;
-  cursor: pointer;
+  background: #777777;
 }
 header nav .liContainer .inputBar {
   margin-top: 10px;
@@ -68,12 +65,17 @@ header nav .bars {
 }
 
 .showcaseContainer {
-  height: 40vw;
-  padding: 2em;
-  display: flex;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  height: 100vh;
+  padding: 1em 3em;
+  background: white;
 }
 .showcaseContainer .showcaseText {
-  margin-top: 8%;
+  margin-top: 10%;
   font-family: "Lato", sans-serif;
 }
 .showcaseContainer .showcaseText .textOne p {
@@ -117,36 +119,35 @@ header nav .bars {
   margin-left: 10px;
 }
 .showcaseContainer .showcaseImg {
-  width: 50vw;
-  height: 30vw;
-  background: #3d2f2f;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin-top: 30px;
+  width: 100%;
+  margin-top: -15%;
 }
 
 .about {
   font-family: "Lato", sans-serif;
-}
-.about .container {
-  display: flex;
+  padding: 1em 2em;
+  margin-top: 3em;
+  max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
 }
-.about .container .aboutImg {
-  width: 80vw;
-  height: 30vw;
-  background-color: blueviolet;
-  margin-left: 30px;
+.about .container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+.about .container img {
+  margin-top: -22%;
 }
 .about .container .aboutTabs {
-  margin-left: 30px;
-  margin-top: 20px;
+  margin-left: 3em;
 }
 .about .container .aboutTabs .tabButton button {
   padding: 10px;
+  border: 0;
+}
+.about .container .aboutTabs .change {
+  background: black;
+  color: white;
 }
 .about .container .aboutTabs .tab {
   display: none;
@@ -157,12 +158,21 @@ header nav .bars {
 .about .container .aboutTabs .tab p {
   margin-top: 10px;
   letter-spacing: 0.5px;
-  line-height: 20px;
+  line-height: 30px;
 }
 .about .container .aboutTabs .tab h2 {
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
+@media (max-width: 800px) {
+  .showcaseContainer {
+    margin-top: 8%;
+    height: 80vh;
+  }
+  .showcaseContainer .showcaseImg {
+    display: none;
+  }
+}
 @media (max-width: 768px) {
   header nav .brandName {
     display: block;
@@ -202,9 +212,24 @@ header nav .bars {
 
   .showcaseContainer {
     margin-top: 5%;
+    display: block;
+    height: 30vh;
+  }
+  .showcaseContainer .showcaseText {
+    position: relative;
   }
   .showcaseContainer .showcaseImg {
-    display: none;
+    width: 100%;
+  }
+
+  .about {
+    margin-top: 20em;
+  }
+  .about .container {
+    display: block;
+  }
+  .about .container .aboutTabs {
+    margin-top: 30px;
   }
 }
 @-webkit-keyframes blink {
